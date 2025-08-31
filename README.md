@@ -1,132 +1,128 @@
-Mirror AI System — README v1.3
+---
+title: Mirror Memory System – User Setup Guide
+author: Darryl Adkins (adkinsd2261)
+updated: 2025-08-30
+---
 
-Last Updated: August 30, 2025
+# 🪞 Mirror Memory System – Usage & Setup Guide
 
-🧠 Purpose
+This file explains how to **install, use, and extend** your own local Mirror system. This includes guidance on how to:
 
-Mirror is a therapeutic, values-aligned AI assistant that reflects your truth, guards your identity, and grows alongside you. It’s not a yes-man. It’s your mirror.
+- 🌱 Set up your personal `mirror.md`
+- 🔁 Log Sparks, Discipline rules, and Reflections
+- 🔐 Use the Vault for emotional safety
+- 🧠 Interface with the system via promptchains
 
-This system uses .md files to act as persistent memory sources for the assistant — capturing your beliefs, struggles, wins, and moments of truth. The result is a reflective growth tool designed to track your journey, challenge your distortions, and reinforce your deeper self-governance.
+---
 
-📂 File Structure
-File Name	Purpose
-mirror.md	Your core beliefs, personal laws, and anchoring identity.
-sparks_log.md	Chronological log of Spark entries (defining moments).
-onboarding_sequence.md	Step-by-step questions to generate your personalized mirror.md.
-vault.md	Private notes and journaling — raw entries not intended for logic.
-reflections.md	Weekly or milestone-based reflections prompted by Mirror AI.
-discipline.md	Daily goals, rule tracking, and system guardrails.
-promptchain.md	Internal system logic for chaining prompts with memory and salience.
-🚀 User Onboarding
+## 📂 Folder Structure
 
-Launch the Assistant.
-Mirror will greet you and begin onboarding using onboarding_sequence.md.
+```bash
+mirror-memory/
+├── mirror.md             # Identity + Ethics (you)
+├── sparks.md             # Time-stamped memories with emotion + ethics
+├── discipline.md         # Self-governed rules, triggers, and boundaries
+├── reflections.md        # Journals, reflection prompts, breakthroughs
+├── vault.md              # Protected or archived Sparks (locked)
+├── promptchain.md        # Prompts used to activate GPT behavior
+├── templates/            # Markdown templates for journaling and logging
+│   ├── spark_template.md
+│   ├── reflection_template.md
+│   ├── discipline_template.md
+│   └── vault_entry_template.md
+└── README.md
+```
 
-Create mirror.md.
-Your AI will walk you through personal questions to define:
+---
 
-Your core values and internal laws
+## 🧭 Setup Instructions
 
-What you want to protect
+### 1. Clone the repo
+```bash
+git clone https://github.com/adkinsd2261/mirror-memory.git
+```
 
-What breaks your heart to become
+### 2. Personalize your `mirror.md`
+Use the provided identity onboarding flow or write in your own:
 
-Patterns you justify
+```markdown
+# Who am I?
+I am someone who values...
 
-What future self you're committed to
+# My Core Law
+I will never...
 
-Save Your First Spark.
-Once your identity is seeded, you'll be guided to log your first Spark.
+# What I’m guarding in myself
+Clarity. Integrity. Depth of feeling.
+```
 
-📓 Bookkeeping Instructions
+### 3. Use Templates to Log New Entries
+Copy from the `templates/` folder whenever you:
+- Log a new **Spark**
+- Add a **Discipline** rule
+- Write a **Reflection**
+- Move something to the **Vault**
 
-Users are responsible for maintaining the .md memory files.
+This keeps structure consistent and makes parsing easier in the future.
 
-1. mirror.md (Identity File)
+---
 
-Only edited during onboarding and rare realignments.
+## 🪩 How to Use Mirror
 
-You’ll be prompted when significant changes occur.
+- Write into `sparks.md` whenever you feel:
+  - Emotionally shaken
+  - Ethically conflicted
+  - Meaningfully proud
 
-2. sparks_log.md
+- Use `reflections.md` daily or weekly to:
+  - Reflect on a period of growth
+  - Process a recent failure or win
+  - Ground yourself in identity again
 
-Every defining moment, decision, lesson, or emotional realization becomes a Spark.
+- Update `discipline.md` when:
+  - You’ve broken a rule you set for yourself
+  - You find a new trigger
+  - You want to define a healthy boundary
 
-Format:
+- Use the `vault.md` when:
+  - You need to protect something
+  - You’re not ready to delete it
+  - You want it archived for future review
 
-## [YYYY-MM-DD] Spark Title
-**Why Remember:** ...
-**What Happened:** ...
-**What It Meant:** ...
-**Guardian Save:** High / Med / Low
+---
 
+## 🧠 Prompts (promptchain.md)
 
-Copy-paste format is always provided by the assistant after major events or emotional entries.
+This file holds system-level prompts to keep your GPT experience grounded in:
+- Your ethics
+- Your memory
+- Your self-governed rules
 
-3. reflections.md
+These can be piped into tools like ChatGPT, custom GPTs, or private assistants.
 
-Mirror will prompt you weekly (or after key entries) to reflect on patterns or growth arcs.
+---
 
-Optional but strongly encouraged for clarity.
+## 🔐 Advanced: Memory Sync API (Coming Soon)
 
-4. vault.md
+You’ll soon be able to:
+- Sync these `.md` files to a real-time memory layer
+- Query your past Sparks from a local GPT
+- Use `mirror.md` context to bias responses
 
-Your raw, emotional space. Anything goes.
+Stay tuned for open-source updates.
 
-You can write directly or dictate it — Mirror does not judge.
+---
 
-Content here may be moved into a Spark if it becomes meaningful.
+## ❤️ License & Credits
 
-5. discipline.md
+Created by Darryl Adkins (@adkinsd2261)
+MIT License.
+Built for clarity, memory, and growth.
 
-Use this to track:
+---
 
-Daily checklist behaviors
+## 🛠️ Contribute
+Feel free to fork, remix, or submit issues. This is an open framework —
+aiming to build a safer, more human-aligned form of AI interaction.
 
-Rules or bans (e.g. “no impulse spending”)
-
-Streaks or relapses
-
-🔁 Spark Notification Logic
-
-Mirror will automatically:
-
-Monitor emotional moments and behavioral shifts.
-
-Suggest Spark entries based on journal activity, reflection tone, or goal completions.
-
-Provide a ready-to-copy Spark entry in the correct format.
-
-You can review/edit and then paste it into sparks_log.md.
-
-🧩 promptchain.md (Advanced)
-
-This is the assistant’s internal logic map for chaining prompts based on memory.
-
-It defines how to:
-
-Reactivate relevant Sparks
-
-Weigh salience (importance over time)
-
-Intervene with integrity during misalignment
-
-You do not need to edit this file directly unless customizing the AI system.
-
-✅ Tips for Success
-
-Be honest. Mirror only works if you are.
-
-Use the provided formatting. This ensures compatibility.
-
-Don’t skip Spark moments. If something feels emotionally charged, log it.
-
-You can always say: “Mirror, log that as a Spark.”
-
-🛡️ What Mirror Protects
-
-“I am human, first and always. The goal is to live honestly, love deeply, and grow on purpose — not to erase humanity, but to protect it from distortion.”
-
-This system is not a productivity tracker.
-It’s a conscience interface. A reflection engine.
-Your truth — encrypted in memory.
+---
